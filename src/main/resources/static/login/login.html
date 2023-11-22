@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Giriş Sayfası</title>
+    <title>Giris Sayfasi</title>
     <link rel="stylesheet" href="login.css">
     <script src="login.js"></script>
 </head>
@@ -9,7 +9,7 @@
 <body>
 <div class="container">
     <section id="content">
-        <form action="">
+        <div class="form">
             <h1>Login Form</h1>
             <div>
                 <input type="text" placeholder="Username" required="" id="username"/>
@@ -18,11 +18,11 @@
                 <input type="password" placeholder="Password" required="" id="password"/>
             </div>
             <div>
-                <input type="submit" value="Log in"/>
+                <button class="submit" onclick="giris()">Log in</button>
                 <a href="#">Lost your password?</a>
                 <a href="#">Register</a>
             </div>
-        </form><!-- form -->
+        </div><!-- form -->
     </section><!-- content -->
 </div><!-- container -->
 </body>

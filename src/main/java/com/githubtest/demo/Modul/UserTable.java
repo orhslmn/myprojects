@@ -9,24 +9,54 @@ import jakarta.persistence.*;
 public class UserTable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name ="UserAd" )
-    private String UserAd;
-    @Column(name = "UserPass")
-    private String UserPass;
+    @Column(name ="name" )
+    private String name;
+    @Column(name="LastName")
+    private String lastname;
+    @Column(name="UserName")
+    private String username;
+    @Column(name ="email")
+    private String email;
+    @Column(name="pass")
+    private String pass;
 
-    public String getUserAd() {
-        return UserAd;
+    public String getName() {
+        return name;
     }
 
-    public void setUserAd(String userAd) {
-        UserAd = userAd;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public String getUserPass() {
-        return UserPass;
+    public String getLastname() {
+        return lastname;
     }
 
-    public void setUserPass(String userPass) {
-        UserPass = userPass;
+    public void setLastname(String lastname) {
+        this.lastname = lastname;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPass() {
+        return pass;
+    }
+
+    public void setPass(String pass) {
+        this.pass = pass;
     }
 }

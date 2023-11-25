@@ -7,6 +7,7 @@ import jakarta.persistence.*;
 public class Tables {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     @Column(name = "name")
     private String name;
     @Column(name = "lastname")

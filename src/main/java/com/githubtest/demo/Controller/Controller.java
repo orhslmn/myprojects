@@ -11,7 +11,9 @@ public class Controller {
     @Autowired
     Repository rp;
     @GetMapping("/save")
-    public JSONObject jo(@RequestParam String name,@RequestParam String lastname,@RequestParam String username, @RequestParam String email, @RequestParam String pass){
+    public JSONObject jo(@RequestParam String name,@RequestParam String lastname,@RequestParam String username, @RequestParam String email, @RequestParam String pass)
+
+    {
         JSONObject job=new JSONObject();
         Tables tbl=new Tables();
         tbl.setName(name);

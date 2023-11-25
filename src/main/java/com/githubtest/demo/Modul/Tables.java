@@ -1,23 +1,21 @@
-
 package com.githubtest.demo.Modul;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "kullanici")
-
-public class UserTable {
+@Table(name = "yenikullanici")
+public class Tables {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name ="name" )
+    @Column(name = "name")
     private String name;
-    @Column(name="LastName")
+    @Column(name = "lastname")
     private String lastname;
-    @Column(name="UserName")
+    @Column(name = "username")
     private String username;
-    @Column(name ="email")
+    @Column(name = "email")
     private String email;
-    @Column(name="pass")
+    @Column(name = "pass")
     private String pass;
 
     public String getName() {

@@ -2,9 +2,13 @@ package com.githubtest.demo.Controller;
 import com.fasterxml.jackson.databind.util.JSONPObject;
 import com.githubtest.demo.Modul.Tables;
 import com.githubtest.demo.Repository.Repository;
+import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
 @RestController
 @RequestMapping("/newuser")
 public class Controller {
@@ -26,5 +30,23 @@ public class Controller {
 
         return job;
     }
+    @GetMapping("/usergiris")
+    public JSONObject jarray(@RequestParam String username,@RequestParam String pass) {
+        JSONObject jo = new JSONObject();
+        List<Tables> tb = rp.findAll();
+        boolean kullaniciadi = false;
+        boolean pasword=false;
+        for (Tables ta : tb) {
+            if ((ta.getUsername().equals(username)) && (ta.getPass().equals(pass))){
+                kullaniciadi = true;
+                pasword=true;
+                break;
+            }
+        }
+        jo.put("success", kullaniciadi);
+        jo.put("succes",pasword);
+        return jo;
+    }
+
 }
 

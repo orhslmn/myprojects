@@ -18,6 +18,10 @@ public class Tables {
     private String email;
     @Column(name = "pass")
     private String pass;
+    @Column(name = "guvenliksorusu")
+    private String guvenliksorusu;
+    @Column(name = "sorununcevabi")
+    private String sorununcevabi;
 
     public String getName() {
         return name;

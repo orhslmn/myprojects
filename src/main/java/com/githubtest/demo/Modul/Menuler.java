@@ -5,14 +5,24 @@ import jakarta.persistence.*;
 @Entity
 @Table(name = "menu")
 
-public class menuler {
+public class Menuler {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     @Column(name = "menuadi")
-private String menu;
+    private String menu;
     @Column(name = "url")
     private String url;
+    @Column(name = "aciklama")
+    private String aciklama;
+
+    public String getAciklama() {
+        return aciklama;
+    }
+
+    public void setAciklama(String aciklama) {
+        this.aciklama = aciklama;
+    }
 
     public long getId() {
         return id;
